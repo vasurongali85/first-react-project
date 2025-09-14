@@ -1,0 +1,202 @@
+/* ================== Reset & Base ================== */
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(180deg, #fff5fa, #ffffff);
+  overflow-x: hidden; /* prevent horizontal scroll */
+
+}
+
+/* Keyframes for background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================== Navbar ================== */
+.navbar {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ff69b4 0%, #ffe6f0 100%);
+
+ /* top blue → bottom white */
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+    color: hsl(330, 98%, 52%) !important;
+}
+.nav-link {
+  font-weight: 600;
+  color: #8a1455 !important; /* deep rose to match navbar */
+  font-size: 20px;
+  padding: 8px 20px;         /* space inside button */
+  border-radius: 5px;        /* rounded edges */
+  transition: all 0.3s ease; /* smooth hover transition */
+  display: inline-block;
+}
+
+.nav-link:hover {
+   color: #fff !important;
+  background: #ff4d94;                  /* button background on hover */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* subtle shadow */
+  
+  transform: translateY(-2px);            /* slight lift effect */
+}
+
+.brand-title {
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 2rem;
+}
+
+.brand-tagline {
+  margin-top: 5px;
+  font-size: 0.80rem;
+  color: #07618a;
+  font-style: italic;
+}
+
+.navbar-nav {
+  gap: 15px;
+}
+
+
+
+/* ================== Container & Layout ================== */
+.container {
+  width: 100%;
+  max-width: 1580px;
+  margin: 100px auto 50px; /* space from navbar */
+  padding: 0 20px;
+}
+
+/* Make content full width for Cart page */
+.content {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================== Cards / Product List ================== */
+.item-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  background-color: #fdfbfd;
+  border-radius: 30px;
+}
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch; /* 🔥 make all cards same height */
+}
+
+/* .item-container:hover{
+      transform: scale(1.05);
+} */
+
+
+ .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* force equal card height */
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  background-color: #faf6fa;
+  border: 1px solid #f8f6f7;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* currently pushes button down */
+  gap: 8px; /* reduce vertical space between title, price, and button */
+}
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  
+}
+.card:hover {
+   transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-img:hover{
+  transform: scale(1.05);
+}
+
+
+.price-tag {
+ font-size: 1.1rem;
+  font-weight: bold;
+ 
+  color: #e91e63; /* vibrant pink for price */
+}
+.btn-success {
+  background-color: #28a745; /* Bootstrap green */
+  border: none;
+  padding: 10px;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* darker green */
+  transform: scale(1.09); /* slight zoom */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* shadow */
+}
+
+
+/* ================== Headings ================== */
+h1 {
+  text-align: center;
+  color: #e91e63;  /* pink tone */
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+
+/* ================== Responsive ================== */
+@media (max-width: 1200px) {
+  .card { flex: 1 1 calc(25% - 20px); }
+}
+
+@media (max-width: 992px) {
+  .card { flex: 1 1 calc(33.33% - 20px); }
+}
+
+@media (max-width: 768px) {
+  .card { flex: 1 1 calc(50% - 20px); }
+  .navbar { padding: 0 15px; }
+}
+
+@media (max-width: 576px) {
+  .card { flex: 1 1 100%; }
+}

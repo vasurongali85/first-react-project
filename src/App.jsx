@@ -241,7 +241,7 @@ function App() {
               </li>
               <li className="nav-item mx-2">
                 <NavLink className="nav-link d-flex align-items-center" to="/sweets">
-                  🍬 Sweets
+                   Sweets
                 </NavLink>
               </li>
               <li className="nav-item mx-2">

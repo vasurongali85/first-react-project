@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import "./Home.css";
+import "./home.css";
 
 
 const marqueeProducts = [

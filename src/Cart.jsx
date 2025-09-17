@@ -13,7 +13,7 @@ import {
 } from "./discountutils";
 import { useState } from "react";
 import QRCode from "react-qr-code";
-import "./Cart.css";
+import "./cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";

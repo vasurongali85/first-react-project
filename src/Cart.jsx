@@ -17,6 +17,7 @@ import "./cart.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
+import confetti from "canvas-confetti";
 
 function Cart() {
   const dispatch = useDispatch();
@@ -53,43 +54,52 @@ function Cart() {
   };
 
   // ✅ Checkout
-  const handleCheckout = () => {
-    if (!paymentMethod) {
-      Swal.fire({
-        icon: "warning",
-        title: "⚠️ Select Payment Method",
-        text: "Please select a payment method before checkout!",
-      });
-      return;
-    }
-    if (cartItems.length === 0) return;
-
-    const purchaseDetails = {
-      id: Date.now(),
-      items: [...cartItems],
-      total: finalPrice,
-      date: new Date().toLocaleString(),
-      paymentMethod,
-    };
-
-    dispatch(addOrder(purchaseDetails));
-    dispatch(clearCart());
-
+ const handleCheckout = () => {
+  if (!paymentMethod) {
     Swal.fire({
-      icon: "success",
-      title: "✅ Order Placed!",
-      html: `<b>Payment Method:</b> ${paymentMethod.toUpperCase()} <br/> Total: ₹${finalPrice}`,
-      confirmButtonText: "OK",
+      icon: "warning",
+      title: "⚠️ Select Payment Method",
+      text: "Please select a payment method before checkout!",
     });
+    return;
+  }
+  if (cartItems.length === 0) return;
 
-    toast.success("🎉 Order placed successfully! Cart cleared.", {
-      position: "top-right",
-      autoClose: 2500,
-      theme: "colored",
-    });
-
-    setPaymentMethod("");
+  const purchaseDetails = {
+    id: Date.now(),
+    items: [...cartItems],
+    total: finalPrice,
+    date: new Date().toLocaleString(),
+    paymentMethod,
   };
+
+  dispatch(addOrder(purchaseDetails));
+  dispatch(clearCart());
+
+  Swal.fire({
+  icon: "success",
+  title: "✅ Order Placed!",
+  html: `<b>Payment Method:</b> ${paymentMethod.toUpperCase()} <br/> Total: ₹${finalPrice}`,
+  confirmButtonText: "OK",
+}).then(() => {
+  // 🎉 Confetti after user clicks OK
+  confetti({
+    particleCount: 2000,
+    spread: 1200,
+    origin: { y: 0.6 },
+  });
+});
+
+toast.success("🎉 Order placed successfully! Cart cleared.", {
+  position: "top-right",
+  autoClose: 2000,
+  theme: "colored",
+});
+  
+
+  setPaymentMethod("");
+};
+
 
   return (
     <div className="cart-layout container">

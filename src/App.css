@@ -128,7 +128,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* currently pushes button down */
-  gap: 8px; /* reduce vertical space between title, price, and button */
+  gap: 0px; /* reduce vertical space between title, price, and button */
 }
 .card-title {
   font-size: 1.1rem;
@@ -156,7 +156,8 @@ body {
 .price-tag {
  font-size: 1.1rem;
   font-weight: bold;
- 
+ margin-top: 0px;
+ padding-top: 0px;
   color: #e91e63; /* vibrant pink for price */
 }
 .btn-success {

@@ -5,7 +5,9 @@ import "./Login.css";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "./store";  
 import Swal from "sweetalert2";
-
+// ✅ Import Bootstrap here
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();

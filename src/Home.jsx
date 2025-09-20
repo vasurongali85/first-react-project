@@ -55,7 +55,7 @@ function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <h1 className="st">LoveBites💖</h1>
+          <h1 className="st">BakeHub</h1>
           <h2 style={{ color: '#fa4170', fontSize: '3.5rem', textAlign: 'center' }}>
             India’s #1 food delivery app
           </h2>
@@ -196,13 +196,13 @@ function Home() {
           <div className="footer-section">
             <h3>Company</h3>
             <p>About Us</p>
-            <p>LoveBites Corporate</p>
+            <p>BakeHub Corporate</p>
             <p>Careers</p>
             <p>Our Team</p>
           </div>
           <div className="footer-section">
             <h3>Services</h3>
-            <p>LoveBites Subscription</p>
+            <p>BakeHub Subscription</p>
             <p>Instacake Delivery</p>
             <p>Dine-in Deals</p>
             <p>Bakery Minis</p>
@@ -223,7 +223,7 @@ function Home() {
           </div>
           <div className="footer-section">
             <h3>Connect</h3>
-            <p>Life at LoveBites</p>
+            <p>Life at BakeHub</p>
             <p>Explore with Us</p>
             <p>Bakery Buzz</p>
             <p>Sweet Treats</p>
@@ -239,7 +239,7 @@ function Home() {
         </div>
         <div className="footer-bottom">
           <p>Available in: Bangalore, Gurgaon, Hyderabad, Delhi, Mumbai, Pune, +685 cities</p>
-          <p>For a better experience, download the LoveBites app now! <a href="#">Get it here</a></p>
+          <p>For a better experience, download the BakeHub app now! <a href="#">Get it here</a></p>
         </div>
       </footer>
     </div>

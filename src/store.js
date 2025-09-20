@@ -25,6 +25,16 @@ const productSlice = createSlice({
   { id: 20, Name: "Matcha Green Cake", price: 480, imageurl: "/images/matchacake.jpg" }
     ],
    snacks: [
+      { id: 11, Name: "Veg Cutlet", price: 45, imageurl: "/images/vegcutlet.jpg" },
+  { id: 12, Name: "Chicken Cutlet", price: 70, imageurl: "/images/chickencutlet.jpeg" },
+  { id: 13, Name: "Masala Sandwich", price: 90, imageurl: "/images/masalasandwich.jpeg" },
+  { id: 14, Name: "Corn Sandwich", price: 85, imageurl: "/images/cornsandwich.jpeg" },
+  { id: 15, Name: "Cheese Garlic Toast", price: 95, imageurl: "/images/cheesegarlictoast.jpeg" },
+  { id: 16, Name: "Veg Roll", price: 60, imageurl: "/images/vegroll.jpeg" },
+  { id: 17, Name: "Chicken Nuggets", price: 100, imageurl: "/images/chickennuggets.jpeg" },
+  { id: 18, Name: "Cheese Ball", price: 80, imageurl: "/images/cheeseball.jpeg" },
+  { id: 19, Name: "Paneer Tikka", price: 110, imageurl: "/images/paneertikka.jpeg" },
+  { id: 20, Name: "Veg Spring Roll", price: 70, imageurl: "/images/vegspringroll.jpeg" },
   { id: 1, Name: "Veg Puff", price: 40, imageurl: "/images/vegpuff.jpg" },
   { id: 2, Name: "Paneer Roll", price: 60, imageurl: "/images/paneerroll.jpg" },
   { id: 3, Name: "Chicken Puff", price: 70, imageurl: "/images/chickenpuff.jpg" },
@@ -35,16 +45,7 @@ const productSlice = createSlice({
   { id: 8, Name: "Cheese Roll", price: 85, imageurl: "/images/cheeseroll.jpg" },
   { id: 9, Name: "Paneer Puff", price: 65, imageurl: "/images/paneerpuff.jpeg" },
   { id: 10, Name: "French Fries", price: 50, imageurl: "/images/frenchfries.jpg" },
-  { id: 11, Name: "Veg Cutlet", price: 45, imageurl: "/images/vegcutlet.jpg" },
-  { id: 12, Name: "Chicken Cutlet", price: 70, imageurl: "/images/chickencutlet.jpeg" },
-  { id: 13, Name: "Masala Sandwich", price: 90, imageurl: "/images/masalasandwich.jpeg" },
-  { id: 14, Name: "Corn Sandwich", price: 85, imageurl: "/images/cornsandwich.jpeg" },
-  { id: 15, Name: "Cheese Garlic Toast", price: 95, imageurl: "/images/cheesegarlictoast.jpeg" },
-  { id: 16, Name: "Veg Roll", price: 60, imageurl: "/images/vegroll.jpeg" },
-  { id: 17, Name: "Chicken Nuggets", price: 100, imageurl: "/images/chickennuggets.jpeg" },
-  { id: 18, Name: "Cheese Ball", price: 80, imageurl: "/images/cheeseball.jpeg" },
-  { id: 19, Name: "Paneer Tikka", price: 110, imageurl: "/images/paneertikka.jpeg" },
-  { id: 20, Name: "Veg Spring Roll", price: 70, imageurl: "/images/vegspringroll.jpeg" }
+
 ],
 
    chocolates: [
